@@ -108,6 +108,15 @@ class _FormPageState extends State<FormPage> {
                     earningBarChartLabel: earningWeekBean.label,
                     earningBarChartValue: earningWeekBean.value,
                     earningBarChartMaxValue: earningWeekBean.maxValue,
+                    colors: [
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[800]!,
+                      AppTheme.themeColor[800]!,
+                      AppTheme.themeColor[700]!,
+                    ],
                   ),
                   // 月报
                   SlideForm(
@@ -138,6 +147,15 @@ class _FormPageState extends State<FormPage> {
                     earningBarChartLabel: earningMonBean.label,
                     earningBarChartValue: earningMonBean.value,
                     earningBarChartMaxValue: earningMonBean.maxValue,
+                    colors: [
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[800]!,
+                      AppTheme.themeColor[800]!,
+                      AppTheme.themeColor[700]!,
+                    ],
                   ),
                   // 年报
                   SlideForm(
@@ -183,6 +201,15 @@ class _FormPageState extends State<FormPage> {
                           '十一月',
                           '十二月'
                         ],
+                    colors: [
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[900]!,
+                      AppTheme.themeColor[800]!,
+                      AppTheme.themeColor[800]!,
+                      AppTheme.themeColor[700]!,
+                    ],
                   ),
                 ],
               ),
@@ -209,16 +236,23 @@ class SlideForm extends StatefulWidget {
     required this.earningBarChartLabel,
     required this.earningBarChartMaxValue,
     required this.earningBarChartValue,
+    required this.colors,
   });
 
+  /// 滑动报表的背景色
   final Color color;
+
+  /// 柱状图的颜色
   final Color foregroundColor;
-  final double selectedHeight;
-  final double unSelectedHeight;
-  final String title;
+
+  /// 滑动报表顶部椭圆形的颜色
   final Color backgroundColor;
   final Color cardTextColor;
   final Color cardBorderColor;
+  final List<Color> colors;
+  final double selectedHeight;
+  final double unSelectedHeight;
+  final String title;
   final List<String> expendBarChartLabel;
   final List<double> expendBarChartValue;
   final double expendBarChartMaxValue;
@@ -409,17 +443,27 @@ class _SlideFormState extends State<SlideForm> {
             '  支出分类构成',
             style: TextStyle(color: Colors.white, fontSize: 16),
           ),
-          SizedBox(
-            height: 150,
-            child: CustomedPieChart(
-              label: const ['一月', '二月', '三月', '四月', '五月', '六月', '七月'],
-              value: const [80, 70, 10, 35, 100, 90, 55],
-              color: widget.foregroundColor,
-              outerBorderColor: Colors.white,
-              innerCircleColor: widget.color,
-            ),
+          // const SizedBox(height: 30),
+          Row(
+            children: [
+              const Expanded(child: SizedBox()),
+              SizedBox(
+                height: 300,
+                width: 200,
+                // color: Colors.black,
+                child: CustomedPieChart(
+                  label: const ['一月', '二月', '三月', '四月', '五月', '六月', '七月'],
+                  value: const [80, 70, 10, 35, 100, 90, 55],
+                  colors: widget.colors,
+                  outerBorderColor: Colors.white,
+                  innerCircleColor: widget.color,
+                  textColor: widget.cardTextColor,
+                ),
+              ),
+              const Expanded(child: SizedBox()),
+            ],
           ),
-          const SizedBox(height: 600),
+          const SizedBox(height: 400),
         ],
       ),
     );

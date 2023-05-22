@@ -15,8 +15,8 @@ class AppTheme {
       400: Color(0xFF425D58),
       500: Color(0xFF425D58),
       600: Color(0xFF425D58),
-      700: Color(0xFF425D58),
-      800: Color(0xFF425D58),
+      700: Color(0xFF7C9F99),
+      800: Color.fromARGB(255, 95, 126, 120),
       900: Color(0xFF425D58),
     },
   );

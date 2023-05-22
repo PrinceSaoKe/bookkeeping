@@ -17,6 +17,7 @@ import 'package:bookkeeping/plan/plan.dart';
 import 'package:bookkeeping/plan/plan_detail.dart';
 import 'package:bookkeeping/plan/plan_sub_type.dart';
 import 'package:bookkeeping/root.dart';
+import 'package:bookkeeping/test/pie_chart.dart';
 import 'package:get/get.dart';
 
 class AppRouter {
@@ -39,6 +40,7 @@ class AppRouter {
   static const String login = '/my/login/';
   static const String register = '/my/login/register/';
   static const String myAchievement = '/test/myAchievement/';
+  static const String pieChart = '/test/pieChart/';
 
   static final List<GetPage> router = [
     GetPage(name: root, page: () => const AppRoot()),
@@ -58,6 +60,7 @@ class AppRouter {
     GetPage(name: aboutUs, page: () => const AboutUsPage()),
     GetPage(name: dataManage, page: () => const DataManagePage()),
     GetPage(name: myAchievement, page: () => const MyAchievementPage()),
+    GetPage(name: pieChart, page: () => const PieChartTestPage()),
     GetPage(name: login, page: () => const LoginPage()),
     GetPage(name: register, page: () => const RegisterPage()),
   ];

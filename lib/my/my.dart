@@ -58,12 +58,17 @@ class _MyPageState extends State<MyPage> {
                   Column(
                     children: [
                       // 头像
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundColor: AppTheme.orangeTheme,
-                        child: Padding(
-                          padding: const EdgeInsets.all(10),
-                          child: Image.asset(AppAssets.darkGreenAvatar),
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed(AppRouter.pieChart);
+                        },
+                        child: CircleAvatar(
+                          radius: 40,
+                          backgroundColor: AppTheme.orangeTheme,
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Image.asset(AppAssets.darkGreenAvatar),
+                          ),
                         ),
                       ),
                       // 用户名
