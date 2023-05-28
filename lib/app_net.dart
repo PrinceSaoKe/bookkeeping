@@ -16,6 +16,7 @@ import 'package:bookkeeping/bean/login_bean.dart';
 import 'package:bookkeeping/bean/receipt_classify.dart';
 import 'package:bookkeeping/bean/search_bill_bean.dart';
 import 'package:bookkeeping/bean/shop_ticket_bean.dart';
+import 'package:bookkeeping/bean/speech_recognition_bean.dart';
 import 'package:bookkeeping/bean/text_sort_bean.dart';
 import 'package:bookkeeping/bean/total_mon_data_bean.dart';
 import 'package:bookkeeping/bean/train_ticket_bean.dart';
@@ -45,6 +46,7 @@ class AppNet {
   static const String _totalMonDataURL = '${baseURL}get_all_month_record/';
   static const String _textSortURL = '${baseURL}fff/';
   static const String _bookkeepingSuggestURL = '${baseURL}huaxiang/';
+  static const String _speechRecognitionURL = '${baseURL}yuyinshibie/';
 
   /// 注册
   static Future<UniversalBean> register({
@@ -346,6 +348,20 @@ class AppNet {
     }
     print(response.data);
     return BookkeepingSuggestBean.fromMap(response.data);
+  }
+
+  /// 语音识别
+  static Future<SpeechRecognitionBean> speechRecognition({
+    required String filePath,
+    String language = '中文',
+  }) async {
+    FormData formData = FormData.fromMap({
+      'file': await MultipartFile.fromFile(filePath),
+      'yuzhong': language,
+    });
+    Response response = await dio.post(_speechRecognitionURL, data: formData);
+    print(response.data);
+    return SpeechRecognitionBean.fromMap(response.data);
   }
 
   static const _shopTicketURL = 'https://api.textin.com/robot/v1.0/api/receipt';

@@ -1,11 +1,13 @@
 import 'dart:io';
 
+import 'package:bookkeeping/addons/flutter_sound.dart';
 import 'package:bookkeeping/addons/image_picker.dart';
 import 'package:bookkeeping/app_assets.dart';
 import 'package:bookkeeping/app_net.dart';
 import 'package:bookkeeping/app_router.dart';
 import 'package:bookkeeping/app_theme.dart';
 import 'package:bookkeeping/app_tools.dart';
+import 'package:bookkeeping/bean/speech_recognition_bean.dart';
 import 'package:bookkeeping/bean/universal_bean.dart';
 import 'package:bookkeeping/customed_widgets/alert_dialog.dart';
 import 'package:bookkeeping/customed_widgets/customed_button.dart';
@@ -41,10 +43,14 @@ class _AddBillPageState extends State<AddBillPage> {
   File? imageFile;
   double pageIndex = 0;
   String? remark;
+  AppSoundRecorder soundRecorder = AppSoundRecorder();
+  late TextEditingController selectedInput;
 
   @override
   void initState() {
     super.initState();
+    selectedInput = itemController;
+
     if (Get.arguments != null) {
       if (Get.arguments['money'] != null) money = Get.arguments['money'];
       if (Get.arguments['item'] != null) item = Get.arguments['item'];
@@ -73,10 +79,24 @@ class _AddBillPageState extends State<AddBillPage> {
     });
     itemController.addListener(() {
       item = itemController.text;
+      selectedInput = itemController;
     });
     remarkController.addListener(() {
       remark = remarkController.text;
+      selectedInput = remarkController;
     });
+    fromController.addListener(() {
+      from = fromController.text;
+      selectedInput = fromController;
+    });
+    moneyController.addListener(() {
+      double? temp = double.tryParse(moneyController.text);
+      temp ??= double.tryParse(moneyController.text.replaceAll('。', ''));
+      money = temp;
+      selectedInput = moneyController;
+    });
+
+    soundRecorder.openSoundRecorder();
   }
 
   @override
@@ -370,6 +390,9 @@ class _AddBillPageState extends State<AddBillPage> {
                 backgroundColor: AppTheme.orangeTheme,
                 child: const Icon(Icons.mic),
                 onPressed: () async {
+                  print('调用录音');
+                  soundRecorder.record();
+
                   await AppTools.showPopup(
                     context,
                     widget: Column(
@@ -383,8 +406,11 @@ class _AddBillPageState extends State<AddBillPage> {
                       ],
                     ),
                   );
-                  item = '对不起，没有听清您在说什么';
-                  setState(() {});
+                  soundRecorder.stopRecorder();
+                  SpeechRecognitionBean bean = await AppNet.speechRecognition(
+                    filePath: soundRecorder.audioPath,
+                  );
+                  selectedInput.text = bean.result;
                 },
               ),
             ),
