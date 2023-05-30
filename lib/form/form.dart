@@ -149,12 +149,13 @@ class _FormPageState extends State<FormPage> {
                     earningBarChartMaxValue: earningMonBean.maxValue,
                     colors: [
                       AppTheme.themeColor[900]!,
-                      AppTheme.themeColor[900]!,
-                      AppTheme.themeColor[900]!,
-                      AppTheme.themeColor[900]!,
+                      // AppTheme.themeColor[900]!,
+                      // AppTheme.themeColor[900]!,
+                      // AppTheme.themeColor[900]!,
                       AppTheme.themeColor[800]!,
-                      AppTheme.themeColor[800]!,
+                      // AppTheme.themeColor[800]!,
                       AppTheme.themeColor[700]!,
+                      // Colors.white,
                     ],
                   ),
                   // 年报
@@ -452,8 +453,8 @@ class _SlideFormState extends State<SlideForm> {
                 width: 200,
                 // color: Colors.black,
                 child: CustomedPieChart(
-                  label: const ['一月', '二月', '三月', '四月', '五月', '六月', '七月'],
-                  value: const [80, 70, 10, 35, 100, 90, 55],
+                  label: const ['第一季度', '第二季度', '第四季度'],
+                  value: const [80, 70, 55],
                   colors: widget.colors,
                   outerBorderColor: Colors.white,
                   innerCircleColor: widget.color,

@@ -64,7 +64,7 @@ class DataManagePage extends StatelessWidget {
                         context,
                         title: '导入成功',
                         needCancle: true,
-                        text: '请按照以下字段批量导入Excel表格：\n日期、商户、收支类型、票据类型、金额、内容、备注',
+                        text: '已按照以下字段批量导入Excel表格：\n日期、商户、收支类型、票据类型、金额、内容、备注',
                       );
                     },
                   ),
@@ -91,6 +91,12 @@ class DataManagePage extends StatelessWidget {
                   ListTile(
                     title: const Text('语种选择'),
                     trailing: const Icon(Icons.chevron_right),
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                      ),
+                    ),
                     onTap: () {
                       Get.bottomSheet(
                         Container(
@@ -103,6 +109,7 @@ class DataManagePage extends StatelessWidget {
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 onTap: () {
+                                  AppData().setLanguage('中文');
                                   Get.back();
                                 },
                               ),
@@ -112,6 +119,7 @@ class DataManagePage extends StatelessWidget {
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 onTap: () {
+                                  AppData().setLanguage('闽南话');
                                   Get.back();
                                 },
                               ),
@@ -121,6 +129,7 @@ class DataManagePage extends StatelessWidget {
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 onTap: () {
+                                  AppData().setLanguage('粤语');
                                   Get.back();
                                 },
                               ),
@@ -130,6 +139,7 @@ class DataManagePage extends StatelessWidget {
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 onTap: () {
+                                  AppData().setLanguage('浙江话');
                                   Get.back();
                                 },
                               ),
@@ -139,6 +149,7 @@ class DataManagePage extends StatelessWidget {
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 onTap: () {
+                                  AppData().setLanguage('四川话');
                                   Get.back();
                                 },
                               ),
@@ -148,6 +159,7 @@ class DataManagePage extends StatelessWidget {
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 onTap: () {
+                                  AppData().setLanguage('上海话');
                                   Get.back();
                                 },
                               ),

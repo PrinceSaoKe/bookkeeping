@@ -13,7 +13,7 @@ class HomeDataBean {
     if (map['data'] == null) return;
     Map data = map['data'];
     totalExpend = double.parse(data['expend'].toString());
-    totalEarning = data['earning'];
+    totalEarning = double.parse(data['earning'].toString());
     List list = data['data_day'];
     for (var i = 0; i < list.length; i++) {
       dayList.add(HomeDataDayBean.fromMap(list[i]));

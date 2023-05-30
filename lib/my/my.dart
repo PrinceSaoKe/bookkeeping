@@ -75,7 +75,7 @@ class _MyPageState extends State<MyPage> {
                       const Padding(
                         padding: EdgeInsets.all(10),
                         child: Text(
-                          '用户名',
+                          '游客',
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                       ),

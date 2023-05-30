@@ -6,6 +6,7 @@ class AppData extends GetxController {
   // int get currUserID => int.parse(box.read('currUserID'));
   int? get currUserID => box.read('currUserID');
   String get currUserName => box.read('currUserName');
+  String get currLanguage => box.read('currLanguage');
 
   initData() {
     if (box.read('currUserID') == null) {
@@ -17,5 +18,10 @@ class AppData extends GetxController {
     if (box.read('currLanguage') == null) {
       box.write('currLanguage', '中文');
     }
+  }
+
+  setLanguage(String language) {
+    box.write('currLanguage', language);
+    print(box.read('currLanguage'));
   }
 }

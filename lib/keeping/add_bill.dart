@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:bookkeeping/addons/flutter_sound.dart';
 import 'package:bookkeeping/addons/image_picker.dart';
 import 'package:bookkeeping/app_assets.dart';
+import 'package:bookkeeping/app_data.dart';
 import 'package:bookkeeping/app_net.dart';
 import 'package:bookkeeping/app_router.dart';
 import 'package:bookkeeping/app_theme.dart';
@@ -176,7 +177,7 @@ class _AddBillPageState extends State<AddBillPage> {
             child: const Icon(Icons.check),
             onTap: () async {
               if (money == null) {
-                alertDialog(context, title: '错误', text: '请输入账单金额！');
+                alertDialog(context, title: '错误', text: '账单金额错误！');
                 return;
               } else if (item == null || item == '') {
                 alertDialog(context, title: '错误', text: '请输入商品名称！');
@@ -230,7 +231,7 @@ class _AddBillPageState extends State<AddBillPage> {
 
   Widget _getCustomedKeyboard() {
     return Container(
-      height: 380,
+      height: 390,
       width: double.infinity,
       padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
       color: AppTheme.themeColor,
@@ -396,12 +397,17 @@ class _AddBillPageState extends State<AddBillPage> {
                   await AppTools.showPopup(
                     context,
                     widget: Column(
+                      mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         Icon(Icons.mic, color: Colors.white, size: 50),
                         Text(
                           '请说话',
-                          style: TextStyle(color: Colors.white, fontSize: 40),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            decoration: TextDecoration.none,
+                          ),
                         ),
                       ],
                     ),
@@ -409,7 +415,9 @@ class _AddBillPageState extends State<AddBillPage> {
                   soundRecorder.stopRecorder();
                   SpeechRecognitionBean bean = await AppNet.speechRecognition(
                     filePath: soundRecorder.audioPath,
+                    language: AppData().currLanguage,
                   );
+                  print('当前所使用语言：${AppData().currLanguage}');
                   selectedInput.text = bean.result;
                 },
               ),
