@@ -60,7 +60,7 @@ class _MyPageState extends State<MyPage> {
                       // 头像
                       GestureDetector(
                         onTap: () {
-                          Get.toNamed(AppRouter.pieChart);
+                          // Get.toNamed(AppRouter.pieChart);
                         },
                         child: CircleAvatar(
                           radius: 40,

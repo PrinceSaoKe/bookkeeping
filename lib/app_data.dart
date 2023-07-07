@@ -9,12 +9,12 @@ class AppData extends GetxController {
   String get currLanguage => box.read('currLanguage');
 
   initData() {
-    if (box.read('currUserID') == null) {
-      box.write('currUserID', 1);
-    }
-    if (box.read('currUserName') == null) {
-      box.write('currUserName', '游客登录');
-    }
+    // if (box.read('currUserID') == null) {
+    //   box.write('currUserID', 1);
+    // }
+    // if (box.read('currUserName') == null) {
+    //   box.write('currUserName', '游客登录');
+    // }
     if (box.read('currLanguage') == null) {
       box.write('currLanguage', '中文');
     }

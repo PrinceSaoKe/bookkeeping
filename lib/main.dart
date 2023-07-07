@@ -9,9 +9,9 @@ import 'package:get_storage/get_storage.dart';
 void main() async {
   bool ready = await GetStorage.init();
   print('-------------------------------$ready');
-  if (ready) {
-    runApp(const MyApp());
-  }
+  AppData().initData();
+  print('${AppData().currLanguage}');
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
