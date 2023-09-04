@@ -29,18 +29,31 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 产品预览 / Preview
 
-![主页](./assets/preview/home.jpg "主页"){ width=50% height=auto }
-![计划](./assets/preview/plan.jpg "计划"){ width=50% height=auto }
-![我的](./assets/preview/my.jpg "我的"){ width=50% height=auto }
-![登录](./assets/preview/login.jpg "登录"){ width=50% height=auto }
-![拍照识别账单内容](./assets/preview/ocr.jpg "拍照识别账单内容"){ width=50% height=auto }
-![OCR识别结果](./assets/preview/bookkeeping.jpg "OCR识别结果"){ width=50% height=auto }
-![语音识别](./assets/preview/speech_recognition.jpg "语音识别"){ width=50% height=auto }
-![布奇建议](./assets/preview/suggestion.jpg "布奇建议"){ width=50% height=auto }
-![团队原创成就徽章](./assets/preview/achievement.jpg "团队原创成就徽章"){ width=50% height=auto }
-![柱状图](./assets/preview/bar_chart.jpg "柱状图"){ width=50% height=auto }
-![饼状图](./assets/preview/pie_chart.jpg "饼状图"){ width=50% height=auto }
-![账本日历](./assets/preview/calendar.jpg "账本日历"){ width=50% height=auto }
+<img src="./assets/preview/home.jpg" alt="主页" title="主页" style="zoom: 33%;"/>
+<img src="./assets/preview/plan.jpg" alt="计划" title="计划" style="zoom: 33%;"/>
+<img src="./assets/preview/my.jpg" alt="我的" title="我的" style="zoom: 33%;"/>
+<img src="./assets/preview/login.jpg" alt="登录" title="登录" style="zoom: 33%;"/>
+<img src="./assets/preview/ocr.jpg" alt="拍照识别账单内容" title="拍照识别账单内容" style="zoom: 33%;"/>
+<img src="./assets/preview/bookkeeping.jpg" alt="OCR识别结果" title="OCR识别结果" style="zoom: 33%;"/>
+<img src="./assets/preview/speech_recognition.jpg" alt="语音识别" title="语音识别" style="zoom: 33%;"/>
+<img src="./assets/preview/suggestion.jpg" alt="布奇建议" title="布奇建议" style="zoom: 33%;"/>
+<img src="./assets/preview/achievement.jpg" alt="团队原创成就徽章" title="团队原创成就徽章" style="zoom: 33%;"/>
+<img src="./assets/preview/bar_chart.jpg" alt="柱状图" title="柱状图" style="zoom: 33%;"/>
+<img src="./assets/preview/pie_chart.jpg" alt="饼状图" title="饼状图" style="zoom: 33%;"/>
+<img src="./assets/preview/calendar.jpg" alt="账本日历" title="账本日历" style="zoom: 33%;"/>
+
+<!-- ![主页](./assets/preview/home.jpg "主页"){ width=50% height=auto } -->
+<!-- ![计划](./assets/preview/plan.jpg "计划"){ width=50% height=auto } -->
+<!-- ![我的](./assets/preview/my.jpg "我的"){ width=50% height=auto } -->
+<!-- ![登录](./assets/preview/login.jpg "登录"){ width=50% height=auto } -->
+<!-- ![拍照识别账单内容](./assets/preview/ocr.jpg "拍照识别账单内容"){ width=50% height=auto } -->
+<!-- ![OCR识别结果](./assets/preview/bookkeeping.jpg "OCR识别结果"){ width=50% height=auto } -->
+<!-- ![语音识别](./assets/preview/speech_recognition.jpg "语音识别"){ width=50% height=auto } -->
+<!-- ![布奇建议](./assets/preview/suggestion.jpg "布奇建议"){ width=50% height=auto } -->
+<!-- ![团队原创成就徽章](./assets/preview/achievement.jpg "团队原创成就徽章"){ width=50% height=auto } -->
+<!-- ![柱状图](./assets/preview/bar_chart.jpg "柱状图"){ width=50% height=auto } -->
+<!-- ![饼状图](./assets/preview/pie_chart.jpg "饼状图"){ width=50% height=auto } -->
+<!-- ![账本日历](./assets/preview/calendar.jpg "账本日历"){ width=50% height=auto } -->
 
 ## 安装包下载 / Install
 
