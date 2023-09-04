@@ -29,18 +29,18 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 产品预览 / Preview
 
-<img src="./assets/preview/home.jpg" alt="主页" title="主页" style="zoom: 33%;"/>
-<img src="./assets/preview/plan.jpg" alt="计划" title="计划" style="zoom: 33%;"/>
-<img src="./assets/preview/my.jpg" alt="我的" title="我的" style="zoom: 33%;"/>
-<img src="./assets/preview/login.jpg" alt="登录" title="登录" style="zoom: 33%;"/>
-<img src="./assets/preview/ocr.jpg" alt="拍照识别账单内容" title="拍照识别账单内容" style="zoom: 33%;"/>
-<img src="./assets/preview/bookkeeping.jpg" alt="OCR识别结果" title="OCR识别结果" style="zoom: 33%;"/>
-<img src="./assets/preview/speech_recognition.jpg" alt="语音识别" title="语音识别" style="zoom: 33%;"/>
-<img src="./assets/preview/suggestion.jpg" alt="布奇建议" title="布奇建议" style="zoom: 33%;"/>
-<img src="./assets/preview/achievement.jpg" alt="团队原创成就徽章" title="团队原创成就徽章" style="zoom: 33%;"/>
-<img src="./assets/preview/bar_chart.jpg" alt="柱状图" title="柱状图" style="zoom: 33%;"/>
-<img src="./assets/preview/pie_chart.jpg" alt="饼状图" title="饼状图" style="zoom: 33%;"/>
-<img src="./assets/preview/calendar.jpg" alt="账本日历" title="账本日历" style="zoom: 33%;"/>
+<img src="./assets/preview/home.jpg" alt="主页" title="主页" width="300"/>
+<img src="./assets/preview/plan.jpg" alt="计划" title="计划" width="300"/>
+<img src="./assets/preview/my.jpg" alt="我的" title="我的" width="300"/>
+<img src="./assets/preview/login.jpg" alt="登录" title="登录" width="300"/>
+<img src="./assets/preview/ocr.jpg" alt="拍照识别账单内容" title="拍照识别账单内容" width="300"/>
+<img src="./assets/preview/bookkeeping.jpg" alt="OCR识别结果" title="OCR识别结果" width="300"/>
+<img src="./assets/preview/speech_recognition.jpg" alt="语音识别" title="语音识别" width="300"/>
+<img src="./assets/preview/suggestion.jpg" alt="布奇建议" title="布奇建议" width="300"/>
+<img src="./assets/preview/achievement.jpg" alt="团队原创成就徽章" title="团队原创成就徽章" width="300"/>
+<img src="./assets/preview/bar_chart.jpg" alt="柱状图" title="柱状图" width="300"/>
+<img src="./assets/preview/pie_chart.jpg" alt="饼状图" title="饼状图" width="300"/>
+<img src="./assets/preview/calendar.jpg" alt="账本日历" title="账本日历" width="300"/>
 
 <!-- ![主页](./assets/preview/home.jpg "主页"){ width=50% height=auto } -->
 <!-- ![计划](./assets/preview/plan.jpg "计划"){ width=50% height=auto } -->
