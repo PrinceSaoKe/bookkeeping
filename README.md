@@ -29,18 +29,18 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 产品预览 / Preview
 
-![主页](./assets/preview/home.jpg)
-![计划](./assets/preview/plan.jpg)
-![我的](./assets/preview/my.jpg)
-![登录](./assets/preview/login.jpg)
-![拍照识别账单内容](./assets/preview/ocr.jpg)
-![识别结果](./assets/preview/bookkeeping.jpg)
-![语音识别](./assets/preview/speech_recognition.jpg)
-![布奇建议](./assets/preview/suggestion.jpg)
-![团队原创成就徽章](./assets/preview/achievement.jpg)
-![柱状图](./assets/preview/bar_chart.jpg)
-![饼状图](./assets/preview/pie_chart.jpg)
-![账本日历](./assets/preview/calendar.jpg)
+![主页](./assets/preview/home.jpg "主页"){ width=50% height=auto }
+![计划](./assets/preview/plan.jpg "计划"){ width=50% height=auto }
+![我的](./assets/preview/my.jpg "我的"){ width=50% height=auto }
+![登录](./assets/preview/login.jpg "登录"){ width=50% height=auto }
+![拍照识别账单内容](./assets/preview/ocr.jpg "拍照识别账单内容"){ width=50% height=auto }
+![OCR识别结果](./assets/preview/bookkeeping.jpg "OCR识别结果"){ width=50% height=auto }
+![语音识别](./assets/preview/speech_recognition.jpg "语音识别"){ width=50% height=auto }
+![布奇建议](./assets/preview/suggestion.jpg "布奇建议"){ width=50% height=auto }
+![团队原创成就徽章](./assets/preview/achievement.jpg "团队原创成就徽章"){ width=50% height=auto }
+![柱状图](./assets/preview/bar_chart.jpg "柱状图"){ width=50% height=auto }
+![饼状图](./assets/preview/pie_chart.jpg "饼状图"){ width=50% height=auto }
+![账本日历](./assets/preview/calendar.jpg "账本日历"){ width=50% height=auto }
 
 ## 安装包下载 / Install
 
