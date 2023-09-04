@@ -7,10 +7,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 void main() async {
-  bool ready = await GetStorage.init();
-  print('-------------------------------$ready');
+  await GetStorage.init();
   AppData().initData();
-  print('${AppData().currLanguage}');
   runApp(const MyApp());
 }
 
