@@ -36,6 +36,7 @@ samples, guidance on mobile development, and a full API reference.
 <img src="./assets/preview/ocr.jpg" alt="拍照识别账单内容" title="拍照识别账单内容" width="300"/>
 <img src="./assets/preview/bookkeeping.jpg" alt="OCR识别结果" title="OCR识别结果" width="300"/>
 <img src="./assets/preview/speech_recognition.jpg" alt="语音识别" title="语音识别" width="300"/>
+<img src="./assets/preview/bill.jpg" alt="账单页面" title="账单页面" width="300"/>
 <img src="./assets/preview/suggestion.jpg" alt="布奇建议" title="布奇建议" width="300"/>
 <img src="./assets/preview/achievement.jpg" alt="团队原创成就徽章" title="团队原创成就徽章" width="300"/>
 <img src="./assets/preview/bar_chart.jpg" alt="柱状图" title="柱状图" width="300"/>
@@ -49,6 +50,7 @@ samples, guidance on mobile development, and a full API reference.
 <!-- ![拍照识别账单内容](./assets/preview/ocr.jpg "拍照识别账单内容"){ width=50% height=auto } -->
 <!-- ![OCR识别结果](./assets/preview/bookkeeping.jpg "OCR识别结果"){ width=50% height=auto } -->
 <!-- ![语音识别](./assets/preview/speech_recognition.jpg "语音识别"){ width=50% height=auto } -->
+<!-- ![账单页面](./assets/preview/bill.jpg "账单页面"){ width=50% height=auto } -->
 <!-- ![布奇建议](./assets/preview/suggestion.jpg "布奇建议"){ width=50% height=auto } -->
 <!-- ![团队原创成就徽章](./assets/preview/achievement.jpg "团队原创成就徽章"){ width=50% height=auto } -->
 <!-- ![柱状图](./assets/preview/bar_chart.jpg "柱状图"){ width=50% height=auto } -->
@@ -61,3 +63,7 @@ samples, guidance on mobile development, and a full API reference.
 * iOS: http://47.99.83.24/static/bookkeeping/download/bookkeeping.ipa
 
 *若资源不见了可能是服务器过期导致，请联系 2596818595@qq.com*
+
+*测试手机号：13774521281*
+
+*测试密码：123*
