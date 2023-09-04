@@ -57,7 +57,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## 安装包下载 / Install
 
-* Android: http://47.99.83.24/bookkeeping/download/bookkeeping.apk
-* iOS: http://47.99.83.24/bookkeeping/download/bookkeeping.ipa
+* Android: http://47.99.83.24/static/bookkeeping/download/bookkeeping.apk
+* iOS: http://47.99.83.24/static/bookkeeping/download/bookkeeping.ipa
 
 *若资源不见了可能是服务器过期导致，请联系 2596818595@qq.com*
