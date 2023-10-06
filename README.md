@@ -61,6 +61,11 @@ samples, guidance on mobile development, and a full API reference.
 <!-- ![饼状图](./assets/preview/pie_chart.jpg "饼状图"){ width=50% height=auto } -->
 <!-- ![账本日历](./assets/preview/calendar.jpg "账本日历"){ width=50% height=auto } -->
 
+## 开发环境 / Development Environment
+
+* Dart 2.18.2
+* Flutter 3.3.3
+
 ## 安装包下载 / Install
 
 * Android: [releases](https://github.com/PrinceSaoKe/bookkeeping/releases/download/1.0.0%2B1/bookkeeping.apk)
