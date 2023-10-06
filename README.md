@@ -28,6 +28,7 @@ samples, guidance on mobile development, and a full API reference.
 * 基于灰色预测法实现用户的消费行为预测分析并给出合理的消费建议
 * 团队原创设计的成就徽章
 * 实现了柱状图、折线图、饼状图等多种报表形式
+* 调用接口实现实时汇率转换
 
 ## 产品预览 / Preview
 
@@ -44,6 +45,7 @@ samples, guidance on mobile development, and a full API reference.
 <img src="./assets/preview/bar_chart.jpg" alt="柱状图" title="柱状图" width="300"/>
 <img src="./assets/preview/pie_chart.jpg" alt="饼状图" title="饼状图" width="300"/>
 <img src="./assets/preview/calendar.jpg" alt="账本日历" title="账本日历" width="300"/>
+<img src="./assets/preview/exchange_rate.jpg" alt="汇率转换" title="汇率转换" width="300"/>
 
 <!-- ![主页](./assets/preview/home.jpg "主页"){ width=50% height=auto } -->
 <!-- ![计划](./assets/preview/plan.jpg "计划"){ width=50% height=auto } -->
