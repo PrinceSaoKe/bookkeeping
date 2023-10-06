@@ -2,8 +2,8 @@ import 'package:bookkeeping/app_theme.dart';
 import 'package:flutter/material.dart';
 
 /// 首页搜索框
-class SearchBar extends StatelessWidget {
-  const SearchBar({
+class CustomedSearchBar extends StatelessWidget {
+  const CustomedSearchBar({
     super.key,
     this.enabled = true,
     this.onTap,

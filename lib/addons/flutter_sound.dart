@@ -65,7 +65,7 @@ class AppSoundRecorder {
 }
 
 class AppSoundPlayer {
-  final Codec _codec = Codec.pcm16WAV;
+  // final Codec _codec = Codec.pcm16WAV;
   final String _audioPath = 'audio.wav';
   FlutterSoundPlayer soundPlayer = FlutterSoundPlayer();
 

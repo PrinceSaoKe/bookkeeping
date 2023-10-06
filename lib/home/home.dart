@@ -8,8 +8,8 @@ import 'package:bookkeeping/app_theme.dart';
 import 'package:bookkeeping/bean/home_data_bean.dart';
 import 'package:bookkeeping/bean/total_mon_data_bean.dart';
 import 'package:bookkeeping/customed_widgets/customed_cards.dart';
+import 'package:bookkeeping/customed_widgets/customed_search_bar.dart';
 import 'package:bookkeeping/customed_widgets/over_scroll_behavior.dart';
-import 'package:bookkeeping/customed_widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           Get.toNamed(AppRouter.search);
                         },
-                        child: SearchBar(
+                        child: CustomedSearchBar(
                           enabled: false,
                           onTap: () {
                             Get.toNamed(AppRouter.search);

@@ -103,13 +103,13 @@ class _LoginPageState extends State<LoginPage> {
 // 登录输入框
 class LoginTextField extends StatelessWidget {
   // 在输入框尾部的组件
-  Widget? suffix;
-  TextEditingController controller;
-  String? hintText;
-  bool hideText;
-  TextInputType? inputType;
-  Icon? icon;
-  LoginTextField({
+  final Widget? suffix;
+  final TextEditingController controller;
+  final String? hintText;
+  final bool hideText;
+  final TextInputType? inputType;
+  final Icon? icon;
+  const LoginTextField({
     super.key,
     required this.controller,
     this.hintText,
