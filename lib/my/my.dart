@@ -2,7 +2,6 @@ import 'package:bookkeeping/app_assets.dart';
 import 'package:bookkeeping/app_router.dart';
 import 'package:bookkeeping/app_theme.dart';
 import 'package:bookkeeping/customed_widgets/customed_cards.dart';
-import 'package:bookkeeping/customed_widgets/over_scroll_behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -37,7 +36,7 @@ class _MyPageState extends State<MyPage> {
       ),
       body: ScrollConfiguration(
         // 取消过度滚动水波纹效果
-        behavior: OverScrollBehavior(),
+        behavior: ScrollConfiguration.of(context).copyWith(overscroll: false),
         child: ListView(
           children: [
             // Logo背景

@@ -27,7 +27,7 @@ import 'package:flutter/foundation.dart';
 class AppNet {
   static Dio dio = Dio();
 
-  static const String baseURL = 'http://8.130.110.171:80/';
+  static const String baseURL = 'http://47.99.83.24:11451/';
   static const String _registerURL = '${baseURL}register/';
   static const String _loginURL = '${baseURL}login/';
   static const String _sendPinURL = '${baseURL}send_text/';

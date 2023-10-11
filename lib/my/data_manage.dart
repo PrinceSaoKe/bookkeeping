@@ -5,7 +5,6 @@ import 'package:bookkeeping/app_theme.dart';
 import 'package:bookkeeping/bean/search_bill_bean.dart';
 import 'package:bookkeeping/customed_widgets/alert_dialog.dart';
 import 'package:bookkeeping/customed_widgets/customed_app_bar.dart';
-import 'package:bookkeeping/customed_widgets/over_scroll_behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +17,7 @@ class DataManagePage extends StatelessWidget {
       appBar: const CustomedAppBar('数据管理'),
       backgroundColor: const Color(0xFFF5F5F5),
       body: ScrollConfiguration(
-        behavior: OverScrollBehavior(),
+        behavior: ScrollConfiguration.of(context).copyWith(overscroll: false),
         child: ListView(
           padding: const EdgeInsets.all(15),
           children: [

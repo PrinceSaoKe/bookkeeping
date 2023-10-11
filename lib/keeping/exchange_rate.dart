@@ -3,7 +3,6 @@ import 'package:bookkeeping/app_net.dart';
 import 'package:bookkeeping/app_theme.dart';
 import 'package:bookkeeping/bean/exchange_rate_bean.dart';
 import 'package:bookkeeping/customed_widgets/customed_app_bar.dart';
-import 'package:bookkeeping/customed_widgets/over_scroll_behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -52,7 +51,7 @@ class _ExchangeRatePageState extends State<ExchangeRatePage> {
         ],
       ),
       body: ScrollConfiguration(
-        behavior: OverScrollBehavior(),
+        behavior: ScrollConfiguration.of(context).copyWith(overscroll: false),
         child: isLoading
             ? const Center(child: CircularProgressIndicator())
             : ListView.builder(

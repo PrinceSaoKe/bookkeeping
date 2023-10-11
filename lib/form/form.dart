@@ -12,7 +12,6 @@ import 'package:bookkeeping/customed_widgets/bar_chart.dart';
 import 'package:bookkeeping/customed_widgets/customed_app_bar.dart';
 import 'package:bookkeeping/customed_widgets/customed_cards.dart';
 import 'package:bookkeeping/customed_widgets/line_chart.dart';
-import 'package:bookkeeping/customed_widgets/over_scroll_behavior.dart';
 import 'package:bookkeeping/customed_widgets/pie_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -304,7 +303,8 @@ class _SlideFormState extends State<SlideForm> {
           child: Padding(
             padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
             child: ScrollConfiguration(
-              behavior: OverScrollBehavior(),
+              behavior:
+                  ScrollConfiguration.of(context).copyWith(overscroll: false),
               child: CustomScrollView(
                 slivers: [
                   _buildStickyBar(),

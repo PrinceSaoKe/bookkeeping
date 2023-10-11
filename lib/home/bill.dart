@@ -7,7 +7,6 @@ import 'package:bookkeeping/bean/universal_bean.dart';
 import 'package:bookkeeping/customed_widgets/alert_dialog.dart';
 import 'package:bookkeeping/customed_widgets/customed_button.dart';
 import 'package:bookkeeping/customed_widgets/dash_line.dart';
-import 'package:bookkeeping/customed_widgets/over_scroll_behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -64,7 +63,8 @@ class _BillPageState extends State<BillPage> {
               child: CircularProgressIndicator(color: AppTheme.darkGold),
             )
           : ScrollConfiguration(
-              behavior: OverScrollBehavior(),
+              behavior:
+                  ScrollConfiguration.of(context).copyWith(overscroll: false),
               child: ListView(
                 children: [
                   Stack(

@@ -4,7 +4,6 @@ import 'package:bookkeeping/bean/expect_expend_bean.dart';
 import 'package:bookkeeping/bean/total_mon_data_bean.dart';
 import 'package:bookkeeping/customed_widgets/customed_app_bar.dart';
 import 'package:bookkeeping/customed_widgets/customed_cards.dart';
-import 'package:bookkeeping/customed_widgets/over_scroll_behavior.dart';
 import 'package:flutter/material.dart';
 
 class PlanDetailPage extends StatefulWidget {
@@ -82,7 +81,8 @@ class _PlanDetailPageState extends State<PlanDetailPage> {
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : ScrollConfiguration(
-              behavior: OverScrollBehavior(),
+              behavior:
+                  ScrollConfiguration.of(context).copyWith(overscroll: false),
               child: ListView(
                 children: [
                   // Row(
