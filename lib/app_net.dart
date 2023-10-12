@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:bookkeeping/app_data.dart';
@@ -27,26 +28,79 @@ import 'package:flutter/foundation.dart';
 class AppNet {
   static Dio dio = Dio();
 
-  static const String baseURL = 'http://47.99.83.24:11451/';
-  static const String _registerURL = '${baseURL}register/';
-  static const String _loginURL = '${baseURL}login/';
-  static const String _sendPinURL = '${baseURL}send_text/';
-  static const String _getBillURL = '${baseURL}get_record/';
-  static const String _searchURL = '${baseURL}get_search_record/';
-  static const String _newBill = '${baseURL}input_record/';
-  static const String _changeBill = '${baseURL}change_record/';
-  static const String _deleteBill = '${baseURL}delete_record/';
-  static const String _barChartYear = '${baseURL}get_line_year_record/';
-  static const String _barChartMon = '${baseURL}get_line_month_record/';
-  static const String _barChartWeek = '${baseURL}get_line_week_record/';
-  static const String _exchangeRateURL = '${baseURL}huilv/';
-  static const String _achievementURL = '${baseURL}achievement/';
-  static const String _homeDataURL = '${baseURL}get_all_record/';
-  static const String _expectExpendURL = '${baseURL}forcase/';
-  static const String _totalMonDataURL = '${baseURL}get_all_month_record/';
-  static const String _textSortURL = '${baseURL}fff/';
-  static const String _bookkeepingSuggestURL = '${baseURL}huaxiang/';
-  static const String _speechRecognitionURL = '${baseURL}yuyinshibie/';
+  static late final String baseURL;
+  // static String _registerURL = '${baseURL}register/';
+  // static String _loginURL = '${baseURL}login/';
+  // static String _sendPinURL = '${baseURL}send_text/';
+  // static String _getBillURL = '${baseURL}get_record/';
+  // static String _searchURL = '${baseURL}get_search_record/';
+  // static String _newBill = '${baseURL}input_record/';
+  // static String _changeBill = '${baseURL}change_record/';
+  // static String _deleteBill = '${baseURL}delete_record/';
+  // static String _barChartYear = '${baseURL}get_line_year_record/';
+  // static String _barChartMon = '${baseURL}get_line_month_record/';
+  // static String _barChartWeek = '${baseURL}get_line_week_record/';
+  // static String _exchangeRateURL = '${baseURL}huilv/';
+  // static String _achievementURL = '${baseURL}achievement/';
+  // static String _homeDataURL = '${baseURL}get_all_record/';
+  // static String _expectExpendURL = '${baseURL}forcase/';
+  // static String _totalMonDataURL = '${baseURL}get_all_month_record/';
+  // static String _textSortURL = '${baseURL}fff/';
+  // static String _bookkeepingSuggestURL = '${baseURL}huaxiang/';
+  // static String _speechRecognitionURL = '${baseURL}yuyinshibie/';
+
+  static late String _registerURL;
+  static late String _loginURL;
+  static late String _sendPinURL;
+  static late String _getBillURL;
+  static late String _searchURL;
+  static late String _newBill;
+  static late String _changeBill;
+  static late String _deleteBill;
+  static late String _barChartYear;
+  static late String _barChartMon;
+  static late String _barChartWeek;
+  static late String _exchangeRateURL;
+  static late String _achievementURL;
+  static late String _homeDataURL;
+  static late String _expectExpendURL;
+  static late String _totalMonDataURL;
+  static late String _textSortURL;
+  static late String _bookkeepingSuggestURL;
+  static late String _speechRecognitionURL;
+
+  static getBaseURL() async {
+    Response response =
+        await dio.get('https://princesaoke.github.io/PrinceSaoKe.txt');
+    print('--------------------------baseURL--------------------------');
+    print(response.data);
+    if (response.statusCode == 200) {
+      Map map = jsonDecode(response.toString());
+      String url = map['bookkeeping_base_url'];
+      baseURL = url;
+    } else {
+      baseURL = 'https://47.99.83.24:11451/';
+    }
+    _registerURL = '${baseURL}register/';
+    _loginURL = '${baseURL}login/';
+    _sendPinURL = '${baseURL}send_text/';
+    _getBillURL = '${baseURL}get_record/';
+    _searchURL = '${baseURL}get_search_record/';
+    _newBill = '${baseURL}input_record/';
+    _changeBill = '${baseURL}change_record/';
+    _deleteBill = '${baseURL}delete_record/';
+    _barChartYear = '${baseURL}get_line_year_record/';
+    _barChartMon = '${baseURL}get_line_month_record/';
+    _barChartWeek = '${baseURL}get_line_week_record/';
+    _exchangeRateURL = '${baseURL}huilv/';
+    _achievementURL = '${baseURL}achievement/';
+    _homeDataURL = '${baseURL}get_all_record/';
+    _expectExpendURL = '${baseURL}forcase/';
+    _totalMonDataURL = '${baseURL}get_all_month_record/';
+    _textSortURL = '${baseURL}fff/';
+    _bookkeepingSuggestURL = '${baseURL}huaxiang/';
+    _speechRecognitionURL = '${baseURL}yuyinshibie/';
+  }
 
   /// 注册
   static Future<UniversalBean> register({
@@ -174,7 +228,9 @@ class AppNet {
     int? userID,
     required DateTime date,
   }) async {
-    // print(userID ?? AppData());
+    print('-------------获取首页信息----------------------------');
+    print(_homeDataURL);
+    print('-------------获取首页信息结束----------------------------');
     Response response = await dio.get(_homeDataURL, queryParameters: {
       'user_id': userID ?? AppData().currUserID,
       'date': AppTools.toY0M0D(date)
